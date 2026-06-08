@@ -76,12 +76,14 @@ nltk.download('punkt')
 
 ## 📊 Results
 
-| Model | Best Parameters | Accuracy |
-|---|---|---|
-| Random Forest | `n_estimators=75, max_depth=90` *(best from GridSearch)* | — |
-| Gradient Boosting | `n_estimators=30, max_depth=15, lr=0.1` *(best from GridSearch)* | — |
+| Model | Accuracy | Precision | Recall | F1 Score |
+|---|---|---|---|---|
+| **Random Forest** ✅ | **83.92%** | **84.32%** | 83.34% | **83.83%** |
+| Gradient Boosting | 80.31% | 78.48% | **83.54%** | 80.93% |
 
-> Run the notebook to populate exact metrics — results depend on your environment's GridSearchCV output.
+### Conclusion
+
+The **Random Forest model is the best-performing model** across most metrics. It achieves higher accuracy (+3.6%), precision (+5.8%), and F1 score (+2.9%) than Gradient Boosting. Both models reach similar recall (~83%), meaning they capture positive sentiments at comparable rates — but Random Forest does so with far fewer false positives, making it the preferred choice for this task.
 
 ---
 
